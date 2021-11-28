@@ -30,12 +30,16 @@ const updateTreeData = (tree, id, children) => {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ActionType.LOAD_ROOT:
-      return extend(state, {
-        tree: [action.payload],
-      })
     case ActionType.LOAD_TREE:
       const {id, tree} = action.payload
+      const hasRoot = state.tree[0]
+
+      if (!hasRoot) {
+        return extend(state, {
+          tree: [tree]
+        })
+      }
+
       const newTree = updateTreeData(state.tree, id, tree.children);
       return extend(state, {
         tree: newTree,
