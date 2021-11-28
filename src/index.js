@@ -7,7 +7,7 @@ import thunk from "redux-thunk";
 import {createAPI} from './services/api';
 import { reducer } from './store/reducer';
 import { Provider } from 'react-redux';
-import { loadTree } from './store/api-actions';
+import {loadRootTree} from './store/api-actions';
 
 const api = createAPI();
 
@@ -19,7 +19,7 @@ const store = createStore(
 );
 
 Promise.all([
-  store.dispatch(loadTree())
+  store.dispatch(loadRootTree())
 ])
 .then(() => {
   ReactDOM.render(
