@@ -11,6 +11,11 @@
 * 29.11.2012
 * Тестовое на 4 часа
 
+## Заметки
+Попробовал здесь согласно референсу библиотеку компонентов ant design. Буду надеятся, что такое решение не запрещено :)
+
+Если будут проблемы — готов выслушать критику, хорошего времени суток!
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
