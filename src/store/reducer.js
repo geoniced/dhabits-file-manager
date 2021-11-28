@@ -1,4 +1,4 @@
-import {extend} from "../utils";
+import {extend, getIcon} from "../utils";
 import {ActionType} from "./actions";
 
 const initialState = {
@@ -8,7 +8,9 @@ const initialState = {
 const transformChildren = (children) => children.map((item) => {
   if (!item.children) {
     item.isLeaf = true;
+    item.icon = getIcon(item.title)
   }
+
   item.key = item.id
   return item;
 })
